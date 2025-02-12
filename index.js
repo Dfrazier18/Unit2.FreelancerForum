@@ -17,7 +17,9 @@ function makeFreelancer() {
   const freelancerName = NAMES[Math.floor(Math.random() * NAMES.length)];
   const freelancerOccupation =
     OCCUPATIONS[Math.floor(Math.random() * OCCUPATIONS.length)];
-  const freelancerRate = Math.floor(Math.random() * (200 - 20 + 1)) + 20;
+  const freelancerRate =
+    Math.floor(Math.random() * (PRICE_RANGE.max - PRICE_RANGE.min + 1)) +
+    PRICE_RANGE.min;
   return { freelancerName, freelancerOccupation, freelancerRate };
 }
 
