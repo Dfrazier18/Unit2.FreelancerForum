@@ -13,15 +13,15 @@ const NUM_FREELANCERS = 100;
 
 // === State ===
 
-function MakeFreelancer() {
+function makeFreelancer() {
   const freelancerName = NAMES[Math.floor(Math.random() * NAMES.length)];
   const freelancerOccupation =
     OCCUPATIONS[Math.floor(Math.random() * OCCUPATIONS.length)];
-  const freelancerRate =
-    PRICE_RANGE[Math.floor(Math.random() * PRICE_RANGE.length)];
+  const freelancerRate = Math.floor(Math.random() * (200 - 20 + 1)) + 20;
   return { freelancerName, freelancerOccupation, freelancerRate };
 }
 
+const freelancers = Array.from({ length: NUM_FREELANCERS }, makeFreelancer);
 // === Components ===
 
 // === Render ===
