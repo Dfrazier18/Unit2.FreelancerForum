@@ -26,13 +26,20 @@ function makeFreelancer() {
 const freelancers = Array.from({ length: NUM_FREELANCERS }, makeFreelancer);
 // === Components ===
 
+function FreelancerCard(freelancer) {
+  const { freelancerName, freelancerOccupation, freelancerRate } = freelancer;
+
+  const $card = document.createElement("article");
+}
+
 // === Render ===
 
-/*function render() {
+function render() {
   const $app = document.querySelector("#app");
   $app.innerHTML = `
   <h1>Freelancer Forum</h1>
+  <p>The average rate is $${(PRICE_RANGE.min + PRICE_RANGE.max) / 2}</p>
   <FreelancerCards></FreelancerCards>
   `;
 }
-*/
+render();
